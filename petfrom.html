@@ -1,0 +1,113 @@
+<html>
+
+  <head>
+  
+      <style>
+      .checkbox {
+        align=center;
+		margin-left:10px;
+       
+      }
+	  form {
+	  align:l;
+	  }
+	  body{
+background-repeat: no-repeat;
+ background-size: cover;
+}
+	  .form1 {
+	  
+	  align:center;
+	  }
+	  input[type=button], input[type=submit], input[type=reset] {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    </style>
+  </head>
+  <body background="D:\images\pets3.png">
+    <h1 style="text-align: center">PET REGISTRATION FORM </h1>
+
+    <form name="RegForm" action="submit" onsubmit="return ValidationForm()" method="post" style="color:black" >
+	
+      <div>
+        <b><label for="ownerName"> OWNER NAME:</label></b>
+        <input type="text" id="ownerName"  name="ownerName" required>
+      </div>
+      <br>
+	  <div>
+       <b> <label for="petName">PET NAME:</label></b>
+        <input type="text" id="petName"  name="petName" required>
+      </div>
+      <br>
+	   <div>
+       <b> <label for="petid">PET ID:</label></b>
+        <input type="number" id="petid"  name="petid" required>
+      </div>
+      <br>
+	  <b> <label for="petage">PET AGE:</label></b>
+        <input type="number" id="petage"  name="petage" required>
+      </div>
+      <br>
+	   <div>
+      <b>  <label for="pettype">PET TYPE:</label></b>
+        <select name="pettype" required>
+			<option value="" disabled selected>Select PetType</option>
+			<option value="1">DOG</option>
+			<option value="2">CAT</option>
+			<option value="3">BIRD</option>
+			
+		</select>
+      </div>
+      <br>
+      <div>
+      <b>  <label for="dop">PROCEDURE DATE:</label></b>
+        <input type="date" id="dop"  name="dop" required>
+      </div>
+      <br>
+	 
+       <b> <label for="dop">PROCEDURE DETAILS:</label></b>
+               <label for="hobbies">Choose from the list</label> <br>
+			     <div class="checkbox">
+              <input type="checkbox" id="pd1" name="procedure1" value="rabies_vaccination">
+             <label for="pd1"> Rabies Vaccination</label> <br>
+			 <input type="checkbox" id="pd2" name="procedure2" value="Examine&treat_wound">
+             <label for="pd2"> Examine and treat wound</label> <br>
+            <input type="checkbox" id="pd3" name="procedure3" value="heartwormtest ">
+             <label for="pd3"> Heart Worm Test</label> <br>
+		 <input type="checkbox" id="pd4" name="procedure4" value="tetanusvaccination ">
+             <label for="pd4"> Tetanus Vaccination</label> <br>
+	  <input type="checkbox" id="pd5" name="procedure5" value="annualtest ">
+             <label for="pd5"> Annual Test</label> <br>
+		   <input type="checkbox" id="pd6" name="procedure6" value="eyewash ">
+             <label for="pd6"> Eye Wash</label> <br>
+			 
+      </div>
+	<br><b>  Any Other:<b>
+<input type="text" name="Any Other"> <br><br>
+      <br>
+     
+      <br>
+      <div class="buttons">
+        <input type="submit" value="Send" name="Submit">
+        <input type="reset" value="Reset" name="Reset">
+      </div>
+	  </div>
+    </form>
+    <script>
+      function ValidationForm() {
+        let username = document.forms["RegForm"]["Name"];
+        if(username.value == "") {
+          alert("Please enter your name.");
+          username.focus();
+          return false;
+        }
+       
+    </script>
+  </body>
+</html>
